@@ -13,6 +13,7 @@ const vendors = [
         price: 4.0,
         category: "Main Course",
         available: true,
+        popularity: 5,
       },
       {
         id: "at-2",
@@ -21,6 +22,7 @@ const vendors = [
         price: 5.0,
         category: "Main Course",
         available: false,
+        popularity: 8,
       },
     ],
   },
@@ -38,6 +40,7 @@ const vendors = [
         price: 2.0,
         category: "Beverages",
         available: true,
+        popularity: 10,
       },
       {
         id: "cafe-2",
@@ -46,6 +49,7 @@ const vendors = [
         price: 5.0,
         category: "Main Course",
         available: true,
+        popularity: 2,
       },
     ],
   },

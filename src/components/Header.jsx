@@ -1,5 +1,5 @@
-function Header() {
-  const cartCount = 0; //Becomes state in Part C
+function Header({ cartCount }) {
+//  const cartCount = 0;
 
   return (
     <header className="header">

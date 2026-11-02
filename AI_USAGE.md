@@ -13,6 +13,6 @@ git push
 
 ## Week 2
 - Tool(s):
-- What I asked for:
+- What I asked for: Adding feature
 - What I kept, changed or rejected, and why:
 - One thing the AI got wrong and how I fixed it:

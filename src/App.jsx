@@ -5,17 +5,22 @@ import VendorCard from "./components/VendorCard";
 import MenuList from "./components/MenuList";
 import Footer from "./components/Footer";
 
+function handleAddToCart(item) {
+  setCart((prevCart) => [...prevCart, item]); // a NEW array, never cart.push
+}
+
 function App() {
   const [selectedVendorId, setSelectedVendorId] = useState(vendors[0].id);
   const selectedVendor = vendors.find((v) => v.id === selectedVendorId);
+  const [cart, setCart] = useState([]);
 
   return (
     <>
-      <Header />
+      <Header cartCount={cart.length} />
       <main className="container">
         <section>
           <h2 className="section-title">Choose a Vendor</h2>
-          <div className="vendor.grid">
+          <div className="vendor-grid">
             {vendors.map((vendor) => (
               <VendorCard
                 key={vendor.id}
@@ -28,7 +33,7 @@ function App() {
         </section>
         <section>
           <h2 className="section-title">Menu: {selectedVendor.name}</h2>
-          <MenuList items={selectedVendor.menu} />
+          <MenuList items={selectedVendor.menu} onAdd={handleAddToCart} />
         </section>
       </main>
       <Footer />
