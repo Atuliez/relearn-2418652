@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header />
-      <main classname="container">
+      <main className="container">
         <section>
           <h2 className="section-title">Today's Vendors</h2>
           <VendorCard />
