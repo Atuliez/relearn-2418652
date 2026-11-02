@@ -1,10 +1,9 @@
-function MenuItemCard() {
-  const item = {
-    name: "Nasi Goreng",
-    desccription: "Rice, Spices, Vegetables, Egg",
-    price: 4.0,
-    available: true,
-  };
+function MenuItemCard({ item }) {
+  // const item = {
+  //   name: "Nasi Goreng",
+  //   desccription: "Rice, Spices, Vegetables, Egg",
+  //   price: 4.0,
+  //   available: true,
 
   return (
     <article className="card menu-card">
