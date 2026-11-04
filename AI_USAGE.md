@@ -16,3 +16,9 @@ git push
 - What I asked for: Adding feature
 - What I kept, changed or rejected, and why:
 - One thing the AI got wrong and how I fixed it:
+
+## Week 3
+- Tool(s):
+- What I asked for: Adding feature
+- What I kept, changed or rejected, and why:
+- One thing the AI got wrong and how I fixed it:
