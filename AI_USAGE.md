@@ -36,6 +36,7 @@ git push
 + Why is my CartPage not loading, 
 + Help me, why is my display kinda strecthd (attached a screenshot) *2 times
 + fix my vendor page that displays a specifc vendors menu
++ WHy is mmy git npt updating??
 
 - What I kept, changed or rejected, and why:
 + All the added coddes for lab 4 while deleting -dom,
