@@ -158,7 +158,7 @@
         "price": 7.5,
         "category": "Drinks",
         "popular": true,
-        "available": true,
+        "available": false,
         "popularity": 5
       },
       {
@@ -213,7 +213,7 @@
         "price": 7.0,
         "category": "Cookies",
         "popular": true,
-        "available": true,
+        "available": false,
         "popularity": 8
       },
 
@@ -252,7 +252,7 @@
     "name": "Stall Bikin Ketagih Bubur Oren",
     "location": "Mahallah Maryam, Cafe Maryam",
     "openHours": "10:00 am - 11:00 pm",
-    "isOpen": true,
+    "isOpen": false,
     "menu": [
       {
         "id": "2414950-m1",
@@ -354,7 +354,7 @@
         "description": "Refreshing Jelly wtih Honey and Lemon",
         "price": 4,
         "category": "Dessert",
-        "available": true,
+        "available": false,
         "popularity": 1
       },
       {
@@ -392,7 +392,7 @@
         "spiceLevel": 4,
         "price": 1.5,
         "category": "Add-On",
-        "available": true,
+        "available": false,
         "popularity": 7
       },
       {

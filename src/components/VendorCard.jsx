@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 function VendorCard({ vendor, isSelected, onSelect }) {
   // const vendor = {
   //   name: "Cafe Mahallah A_Tool",
@@ -16,11 +18,13 @@ function VendorCard({ vendor, isSelected, onSelect }) {
         {vendor.name.charAt(0)}
       </div>
       <div>
-        <h2>{vendor.name}</h2>
+        <Link to={`/vendor/${vendor.id}`}>
+          <h2>{vendor.name}</h2>
+        </Link>
         <p className="muted">{vendor.location}</p>
-        <span className={vendor.isOpen ? "status open" : "status closed"}>
-          {vendor.isOpen ? "Open now" : "Closed"}
-        </span>
+          <span className={vendor.isOpen ? "status open" : "status closed"}>
+            {vendor.isOpen ? "Open now" : "Closed"}
+          </span>
       </div>
     </button>
   );

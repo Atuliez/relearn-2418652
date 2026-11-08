@@ -85,7 +85,7 @@ function CheckoutForm({ onPlaceOrder }) {
           </option>
         ))}
       </select>
-      {errors.mahallah && <p className="error">{errors.mahallah}</p>}
+      {errors.mahallah && <p className="field-error">{errors.mahallah}</p>}
 
       <label htmlFor="pickupTime">Pickup time</label>
       <input
@@ -97,7 +97,7 @@ function CheckoutForm({ onPlaceOrder }) {
         min="07:00"
         max="22:00"
       />
-      {errors.pickupTime && <p className="error">{errors.pickupTime}</p>}
+      {errors.pickupTime && <p className="field-error">{errors.pickupTime}</p>}
 
       <button type="submit" className="btn">
         Place order

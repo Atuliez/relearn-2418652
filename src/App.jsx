@@ -1,10 +1,17 @@
+import { BrowserRouter, Route, Routes } from "react-router";
+import CartProvider from "./context/CartProvider.jsx";
+import Layout from "./components/Layout.jsx";
+import HomePage from "./pages/HomePaga.jsx";
+import VendorPage from "./pages/VendorPage.jsx";
+import OrdersPage from "./pages/OrdersPage.jsx";
+import NotFoundPage from "./pages/NotFoundPage.jsx";
 import { useEffect, useState } from "react";
 import { Loading, ErrorMessage } from "./components/Status.jsx";
-import Header from "./components/Header";
-import VendorCard from "./components/VendorCard";
-import MenuList from "./components/MenuList";
-import CartPage from "./components/CartPage";
-import Footer from "./components/Footer";
+import Header from "./components/Header.jsx";
+import VendorCard from "./components/VendorCard.jsx";
+import MenuList from "./components/MenuList.jsx";
+import CartPage from "./pages/CartPage.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   const [vendors, setVendors] = useState([]);
@@ -52,7 +59,7 @@ function App() {
   const cartCount = cart.reduce((sum, line) => sum + line.qty, 0);
 
   function handleAddToCart(item) {
-    setCart((prevCart) => {
+    setCart((prev) => {
       // [...prevCart, item]); // a NEW array, never cart.push
       const existing = prev.find((line) => line.item.id === item.id);
 
@@ -152,13 +159,22 @@ function App() {
 
   return (
     <>
-      <Header
-        cartCount={cartCount}
-        onShowMenu={() => setView("menu")}
-        onShowCart={() => setView("cart")}
-      />
-      <main className="container">{content}</main>
-      <Footer />
+      <CartProvider>
+        <BrowserRouter>
+       
+
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<HomePage content={content} />} />
+              <Route path="/vendor/:id" element={<VendorPage />} />
+              <Route path="/cart" element={<CartPage />} />
+              <Route path="/orders" element={<OrdersPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
+      
     </>
   );
 }

@@ -461,6 +461,11 @@ a.card:hover {
   color: #b3261e;
   font-size: 0.9rem;
 }
+.cart-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
 .cart-layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -614,7 +619,7 @@ a.card:hover {
 .form select {
   padding: 0.5rem;
   border: 1px solid #c5cbd3;
-  borderradius: 8px;
+  border-radius: 8px;
   font: inherit;
 }
 .field-error {
