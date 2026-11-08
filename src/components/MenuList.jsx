@@ -17,7 +17,7 @@ function MenuList({ items }) {
       case "price-high":
         return b.price - a.price;
       case "popularity":
-        return Number(b.popularity ?? 0) - Number(a.popularity ?? 0);
+        return b.popularity - a.popularity;
       default:
         return 0;
     }
