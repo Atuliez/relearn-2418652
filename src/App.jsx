@@ -7,11 +7,9 @@ import OrdersPage from "./pages/OrdersPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import { useEffect, useState } from "react";
 import { Loading, ErrorMessage } from "./components/Status.jsx";
-import Header from "./components/Header.jsx";
 import VendorCard from "./components/VendorCard.jsx";
 import MenuList from "./components/MenuList.jsx";
 import CartPage from "./pages/CartPage.jsx";
-import Footer from "./components/Footer.jsx";
 
 function App() {
   const [vendors, setVendors] = useState([]);
